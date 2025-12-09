@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мое Портфолио</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        /* Шапка */
+        header {
+            background: linear-gradient(135deg, #0078ff 0%, #005fcc 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+        }
+
+        /* Навигация */
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+            color: #ffff99;
+        }
+
+        /* Секция О себе */
+        .about {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding: 40px;
+            background-color: white;
+            margin: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            flex-wrap: wrap;
+        }
+
+        .about img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .info {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .info h2 {
+            color: #0078ff;
+            margin-bottom: 15px;
+            font-size: 2em;
+        }
+
+        .info p {
+            color: #333;
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+
+        /* Секция Проектов */
+        .projects {
+            padding: 40px;
+            margin: 30px;
+        }
+
+        .projects h2 {
+            color: #0078ff;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        .cont {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        /* Карточка */
+        .card {
+            background: #CCCCFF;
+            padding: 20px;
+            width: 280px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 15px;
+            display: block;
+        }
+
+        .card h3 {
+            color: #0078ff;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .card p {
+            color: #555;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+
+        /* Кнопка */
+        .btn {
+            background: #0078ff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: #005fcc;
+            transform: scale(1.05);
+        }
+
+        /* Секция Контактов */
+        .contact {
+            padding: 40px;
+            background-color: white;
+            margin: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact h2 {
+            color: #0078ff;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .contact p {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .contact a {
+            color: #0078ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Подвал */
+        footer {
+            background-color: #0078ff;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .about {
+                flex-direction: column;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header>
+        <h1>🚀 Мое Портфолио</h1>
+        <p>Веб-разработчик & Проектировщик</p>
+        <nav>
+            <ul>
+                <li><a href="olimon.html">О себе</a></li>
+                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Секция О себе -->
+    <section id="about" class="about">
+        <img src="../IMG/ALIEV.png" alt="Фото профиля">
+        <div class="info">
+            <h2>Привет! Я Веб-разработчик</h2>
+            <p>Меня зовут [Ваше имя]. Я студент ТГУ, специализирующийся на веб-разработке. Я увлечен созданием красивых и функциональных веб-приложений.</p>
+            <p>Мои основные навыки:</p>
+            <p>✓ HTML5 & CSS3<br>✓ JavaScript<br>✓ Адаптивный дизайн<br>✓ Веб-оптимизация</p>
+        </div>
+    </section>
+
+    <!-- Секция Проектов -->
+    <section id="projects" class="projects">
+        <h2>Мои Проекты</h2>
+        <div class="cont">
+            <div class="card">
+                <img src="../IMG/101010101.jpg" class="avatar" alt="Проект 1">
+                <h3>Проект 1</h3>
+                <p>Описание первого проекта. Здесь расскажите о том, что вы создали и какие технологии использовали.</p>
+                <a href="../index.html" class="btn">Подробнее</a>
+            </div>
+
+            <div class="card">
+                <img src="../IMG/Снимок экрана 2025-12-03 093421.jpg" class="avatar" alt="Проект 2">
+                <h3>Проект 2</h3>
+                <p>Описание второго проекта. Здесь расскажите о том, что вы создали и какие технологии использовали.</p>
+                <a href="../index.html" class="btn">Подробнее</a>
+            </div>
+
+            <div class="card">
+                <img src="../IMG/Снимок экрана 2025-12-03 093232.jpg" class="avatar" alt="Проект 3">
+                <h3>Проект 3</h3>
+                <p>Описание третьего проекта. Здесь расскажите о том, что вы создали и какие технологии использовали.</p>
+                <a href="../Html/новая.html" class="btn">Подробнее</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Контактов -->
+    <section id="contact" class="contact">
+        <h2>Свяжитесь со мной</h2>
+        <p>📧 Email: <a href="mailto:alievabdujalol4@gmail.com">alievabdujalol4@gmail.com</a></p>
+        <p>📱 Телефон: <a href="tel:+992926064200">+992 92 606 42 00</a></p>
+        <p>💼 LinkedIn: <a href="#">Профиль LinkedIn</a></p>
+        <p>🐙 GitHub: <a href="#">Мой GitHub</a></p>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <p>&copy; 2025 Мое Портфолио. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
